@@ -1,0 +1,2 @@
+## Sonar cube installation using Terraform,Please update access key,Security key in provider.tf file and place your pem key under Sonarcube folder.
+# In My case I have Generated pem key(june.pem) under Sonarcube folder.
