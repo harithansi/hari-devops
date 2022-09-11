@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars:
+    var1:
+      - india
+      - china
+      - pak
+      - England
+  tasks:
+    - name: Ansible list variable
+      register: list_output
+      debug:
+        var: list_output
