@@ -1,0 +1,43 @@
+[33mcommit 5293e8585660bd8503e7fc4907569f9822cda78e[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: hari Thanneeru <harit.naidu@gmail.com>
+Date:   Sun Sep 11 06:52:28 2022 +0530
+
+    Ansibe play book for Enviroment variable
+
+[33mcommit 5f19b2ea7f14cc3bfb55a4404482553611d32ddb[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:38:01 2022 +0530
+
+    Add files via upload
+
+[33mcommit 38e3a50b9313621fe55afa708b3287400abc9856[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:37:24 2022 +0530
+
+    Security group information
+
+[33mcommit 9f75534ad3ee6a104fed2d79014048af9f6b950f[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:36:30 2022 +0530
+
+    Specify Provider information.
+    
+    Please mention access and security key
+
+[33mcommit bf83a6c52dbe8af8f59d2cf0f88efed50a1cb8c6[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:33:58 2022 +0530
+
+    Add files via upload
+
+[33mcommit 22a7f50c026a24cbd70dfa1569b171dce6819fbf[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:30:23 2022 +0530
+
+    Create README.md
+
+[33mcommit df954cbd61f3678c6a905e7e1f6d08734f8a83c5[m
+Author: harithansi <40013976+harithansi@users.noreply.github.com>
+Date:   Sat Jul 2 22:29:41 2022 +0530
+
+    EC2 machine spinup with customize shell script
