@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Environment variable display in ansible
+    debug:
+      msg: "{{ ansible_env }}"
