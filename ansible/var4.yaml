@@ -2,4 +2,5 @@
 - hosts: localhost
   tasks:
     - name: this is testing
-      debug: "{{ansible_env}}"
+      debug: 
+        -msg: "{{ansible_env}}"
