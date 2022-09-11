@@ -11,7 +11,7 @@
       state: latest
     when:  ansible_facts['distribution'] ==  "Ubuntu"
   - name: Java version validation
-    shell: java --version
+    shell: java --version 
     register: var1
-    debug:
-      msg: "{{var1}}"
+  - debug:
+      msg: "{{var1.stdout_lines}}"

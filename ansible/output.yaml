@@ -1,0 +1,12 @@
+---
+
+- hosts: localhost
+  name: Check uptime of the remote host
+
+  tasks:
+          - name: Check uptime of remote Ubuntu server
+            shell: uptime
+            register: command_output
+
+          - debug:
+                var: command_output.stdout_lines
