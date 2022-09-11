@@ -3,4 +3,4 @@
   tasks:
     - name: this is testing
       debug: 
-        -msg: "{{ansible_env}}"
+        msg: "{{ansible_env}}"
