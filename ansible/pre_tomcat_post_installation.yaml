@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars:
+    port: 8080
+  pre_tasks:
+  - name: java installation
+    apt:
+      name: default-jdk
+      state: latest
+    when:  ansible_facts['distribution'] ==  "Ubuntu"
+  - name: Java version validation
+    shell: java --version
