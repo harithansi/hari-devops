@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   become: yes
+  become_user: root
   vars:
     port: 8080
   pre_tasks:
@@ -11,3 +12,6 @@
     when:  ansible_facts['distribution'] ==  "Ubuntu"
   - name: Java version validation
     shell: java --version
+    register: var1
+    debug:
+      msg: "{{var1}}"
