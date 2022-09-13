@@ -1,13 +1,13 @@
 ---
 - hosts: local
-- tasks:
-    - name: validate content is exist or not in a file
-      become: yes
-      become_user: root
-      tags: example1
-      lineinfile:
-        path: /etc/apache2/ports.conf
-        line: "Listen 80"
-        state: present
-        backup: yes
-      check_mode: yes
+  tasks:
+  - name: validate content is exist or not in a file
+    become: yes
+    become_user: root
+    tags: example1
+    lineinfile:
+      path: /etc/apache2/ports.conf
+      line: "Listen 80"
+      state: present
+      backup: yes
+  check_mode: yes
