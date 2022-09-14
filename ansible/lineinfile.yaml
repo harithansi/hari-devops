@@ -10,4 +10,15 @@
       line: "Listen 80"
       state: present
       backup: yes
-  check_mode: yes
+    check_mode: yes
+  - name: Replace the string if match found
+    become: yes
+    become_user: root
+    tags: example2
+    lineinfile:
+      path: /etc/apache2/ports.conf
+      regexp: "Listen 80"
+      line: "Listen 8082"
+      state: present
+      backup: yes
+      register: example2out
