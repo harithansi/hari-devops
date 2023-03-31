@@ -11,8 +11,9 @@ resource "aws_subnet" "public1" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "public-subnet-1"
+    Name = "public-subnet-1a"
   }
+  availability_zone = "us-west-1a"
 }
 
 resource "aws_subnet" "public2" {
@@ -20,8 +21,9 @@ resource "aws_subnet" "public2" {
   cidr_block = "10.0.2.0/24"
 
   tags = {
-    Name = "public-subnet-2"
+    Name = "public-subnet-1c"
   }
+  availability_zone = "us-west-1c"
 }
 
 resource "aws_subnet" "private1" {
@@ -29,8 +31,9 @@ resource "aws_subnet" "private1" {
   cidr_block = "10.0.3.0/24"
 
   tags = {
-    Name = "private-subnet-1"
+    Name = "private-subnet-1a"
   }
+  availability_zone = "us-west-1a"
 }
 
 resource "aws_subnet" "private2" {
@@ -38,7 +41,16 @@ resource "aws_subnet" "private2" {
   cidr_block = "10.0.4.0/24"
 
   tags = {
-    Name = "private-subnet-2"
+    Name = "private-subnet-1c"
+  }
+  availability_zone = "us-west-1c"
+}
+
+resource "aws_db_subnet_group" "db_subnet_group" {
+  name       = "example_db_subnet"
+  subnet_ids = [aws_subnet.private1.id, aws_subnet.private2.id]
+  tags = {
+    Name = "example_db_subnet"
   }
 }
 
