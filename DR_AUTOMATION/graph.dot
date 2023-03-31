@@ -1,0 +1,224 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" [label = "module.autoscaling_group.aws_autoscaling_group.asg", shape = "box"]
+		"[root] module.autoscaling_group.aws_autoscaling_policy.scale_in (expand)" [label = "module.autoscaling_group.aws_autoscaling_policy.scale_in", shape = "box"]
+		"[root] module.autoscaling_group.aws_autoscaling_policy.scale_out (expand)" [label = "module.autoscaling_group.aws_autoscaling_policy.scale_out", shape = "box"]
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in (expand)" [label = "module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in", shape = "box"]
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out (expand)" [label = "module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out", shape = "box"]
+		"[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)" [label = "module.autoscaling_group.aws_launch_configuration.new_lc", shape = "box"]
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" [label = "module.autoscaling_group.aws_launch_template.Launch_template", shape = "box"]
+		"[root] module.autoscaling_group.aws_sns_topic.DR_topic (expand)" [label = "module.autoscaling_group.aws_sns_topic.DR_topic", shape = "box"]
+		"[root] module.autoscaling_group.aws_sns_topic_subscription.DR_subscription (expand)" [label = "module.autoscaling_group.aws_sns_topic_subscription.DR_subscription", shape = "box"]
+		"[root] module.aws_alb_module.aws_alb.main (expand)" [label = "module.aws_alb_module.aws_alb.main", shape = "box"]
+		"[root] module.aws_alb_module.aws_alb_listener.alb_listener (expand)" [label = "module.aws_alb_module.aws_alb_listener.alb_listener", shape = "box"]
+		"[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)" [label = "module.aws_alb_module.aws_alb_listener.ssl_listener", shape = "box"]
+		"[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)" [label = "module.aws_alb_module.aws_alb_target_group.alb_tg", shape = "box"]
+		"[root] module.rds_instance.aws_db_instance.database (expand)" [label = "module.rds_instance.aws_db_instance.database", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] var.alb_name" [label = "var.alb_name", shape = "note"]
+		"[root] var.alb_sg" [label = "var.alb_sg", shape = "note"]
+		"[root] var.allocated_storage" [label = "var.allocated_storage", shape = "note"]
+		"[root] var.ami_id" [label = "var.ami_id", shape = "note"]
+		"[root] var.asg_name" [label = "var.asg_name", shape = "note"]
+		"[root] var.certificate_arn" [label = "var.certificate_arn", shape = "note"]
+		"[root] var.db_subnet_group_name" [label = "var.db_subnet_group_name", shape = "note"]
+		"[root] var.default_cooldown" [label = "var.default_cooldown", shape = "note"]
+		"[root] var.desired_capacity" [label = "var.desired_capacity", shape = "note"]
+		"[root] var.email" [label = "var.email", shape = "note"]
+		"[root] var.engine" [label = "var.engine", shape = "note"]
+		"[root] var.engine_version" [label = "var.engine_version", shape = "note"]
+		"[root] var.final_snapshot_identifier" [label = "var.final_snapshot_identifier", shape = "note"]
+		"[root] var.health_check_grace_period" [label = "var.health_check_grace_period", shape = "note"]
+		"[root] var.health_check_path" [label = "var.health_check_path", shape = "note"]
+		"[root] var.identifier" [label = "var.identifier", shape = "note"]
+		"[root] var.instance_class" [label = "var.instance_class", shape = "note"]
+		"[root] var.instance_profile_arn" [label = "var.instance_profile_arn", shape = "note"]
+		"[root] var.instance_sg" [label = "var.instance_sg", shape = "note"]
+		"[root] var.instance_type" [label = "var.instance_type", shape = "note"]
+		"[root] var.instance_types" [label = "var.instance_types", shape = "note"]
+		"[root] var.key_name" [label = "var.key_name", shape = "note"]
+		"[root] var.max_size" [label = "var.max_size", shape = "note"]
+		"[root] var.min_size" [label = "var.min_size", shape = "note"]
+		"[root] var.on_demand_base_capacity" [label = "var.on_demand_base_capacity", shape = "note"]
+		"[root] var.on_demand_percentage_above_base_capacity" [label = "var.on_demand_percentage_above_base_capacity", shape = "note"]
+		"[root] var.port" [label = "var.port", shape = "note"]
+		"[root] var.publicly_accessible" [label = "var.publicly_accessible", shape = "note"]
+		"[root] var.region" [label = "var.region", shape = "note"]
+		"[root] var.skip_final_snapshot" [label = "var.skip_final_snapshot", shape = "note"]
+		"[root] var.snapshot_identifier" [label = "var.snapshot_identifier", shape = "note"]
+		"[root] var.ssl_policy" [label = "var.ssl_policy", shape = "note"]
+		"[root] var.storage_type" [label = "var.storage_type", shape = "note"]
+		"[root] var.subnet_ids_private" [label = "var.subnet_ids_private", shape = "note"]
+		"[root] var.subnet_ids_public" [label = "var.subnet_ids_public", shape = "note"]
+		"[root] var.tg_name" [label = "var.tg_name", shape = "note"]
+		"[root] var.vpc_id" [label = "var.vpc_id", shape = "note"]
+		"[root] var.vpc_security_group_ids" [label = "var.vpc_security_group_ids", shape = "note"]
+		"[root] module.autoscaling_group (close)" -> "[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in (expand)"
+		"[root] module.autoscaling_group (close)" -> "[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out (expand)"
+		"[root] module.autoscaling_group (close)" -> "[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)"
+		"[root] module.autoscaling_group (close)" -> "[root] module.autoscaling_group.aws_sns_topic_subscription.DR_subscription (expand)"
+		"[root] module.autoscaling_group (expand)" -> "[root] module.aws_alb_module (close)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.asg_name (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.default_cooldown (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.desired_capacity (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.health_check_grace_period (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.instance_types (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.max_size (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.min_size (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.on_demand_base_capacity (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.on_demand_percentage_above_base_capacity (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.subnet_ids_private (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)" -> "[root] module.autoscaling_group.var.target_group_arn (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_policy.scale_in (expand)" -> "[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)"
+		"[root] module.autoscaling_group.aws_autoscaling_policy.scale_out (expand)" -> "[root] module.autoscaling_group.aws_autoscaling_group.asg (expand)"
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in (expand)" -> "[root] module.autoscaling_group.aws_autoscaling_policy.scale_in (expand)"
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in (expand)" -> "[root] module.autoscaling_group.aws_sns_topic.DR_topic (expand)"
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out (expand)" -> "[root] module.autoscaling_group.aws_autoscaling_policy.scale_out (expand)"
+		"[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out (expand)" -> "[root] module.autoscaling_group.aws_sns_topic.DR_topic (expand)"
+		"[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)" -> "[root] module.autoscaling_group.var.ami_id (expand)"
+		"[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)" -> "[root] module.autoscaling_group.var.instance_sg (expand)"
+		"[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)" -> "[root] module.autoscaling_group.var.instance_type (expand)"
+		"[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)" -> "[root] module.autoscaling_group.var.key_name (expand)"
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" -> "[root] module.autoscaling_group.var.ami_id (expand)"
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" -> "[root] module.autoscaling_group.var.instance_profile_arn (expand)"
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" -> "[root] module.autoscaling_group.var.instance_sg (expand)"
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" -> "[root] module.autoscaling_group.var.instance_type (expand)"
+		"[root] module.autoscaling_group.aws_launch_template.Launch_template (expand)" -> "[root] module.autoscaling_group.var.key_name (expand)"
+		"[root] module.autoscaling_group.aws_sns_topic.DR_topic (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.aws_sns_topic_subscription.DR_subscription (expand)" -> "[root] module.autoscaling_group.aws_sns_topic.DR_topic (expand)"
+		"[root] module.autoscaling_group.aws_sns_topic_subscription.DR_subscription (expand)" -> "[root] module.autoscaling_group.var.email (expand)"
+		"[root] module.autoscaling_group.var.ami_id (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.ami_id (expand)" -> "[root] var.ami_id"
+		"[root] module.autoscaling_group.var.asg_name (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.asg_name (expand)" -> "[root] var.asg_name"
+		"[root] module.autoscaling_group.var.default_cooldown (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.default_cooldown (expand)" -> "[root] var.default_cooldown"
+		"[root] module.autoscaling_group.var.desired_capacity (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.desired_capacity (expand)" -> "[root] var.desired_capacity"
+		"[root] module.autoscaling_group.var.email (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.health_check_grace_period (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.health_check_grace_period (expand)" -> "[root] var.health_check_grace_period"
+		"[root] module.autoscaling_group.var.instance_profile_arn (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.instance_profile_arn (expand)" -> "[root] var.instance_profile_arn"
+		"[root] module.autoscaling_group.var.instance_sg (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.instance_sg (expand)" -> "[root] var.instance_sg"
+		"[root] module.autoscaling_group.var.instance_type (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.instance_type (expand)" -> "[root] var.instance_type"
+		"[root] module.autoscaling_group.var.instance_types (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.instance_types (expand)" -> "[root] var.instance_types"
+		"[root] module.autoscaling_group.var.key_name (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.key_name (expand)" -> "[root] var.key_name"
+		"[root] module.autoscaling_group.var.max_size (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.max_size (expand)" -> "[root] var.max_size"
+		"[root] module.autoscaling_group.var.min_size (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.min_size (expand)" -> "[root] var.min_size"
+		"[root] module.autoscaling_group.var.on_demand_base_capacity (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.on_demand_base_capacity (expand)" -> "[root] var.on_demand_base_capacity"
+		"[root] module.autoscaling_group.var.on_demand_percentage_above_base_capacity (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.on_demand_percentage_above_base_capacity (expand)" -> "[root] var.on_demand_percentage_above_base_capacity"
+		"[root] module.autoscaling_group.var.subnet_ids_private (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.autoscaling_group.var.subnet_ids_private (expand)" -> "[root] var.subnet_ids_private"
+		"[root] module.autoscaling_group.var.target_group_arn (expand)" -> "[root] module.autoscaling_group (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.output.alb_arn (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.output.alb_hostname (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.output.alb_listner (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.output.alb_target_group (expand)"
+		"[root] module.aws_alb_module (close)" -> "[root] module.aws_alb_module.output.alb_tg_arn (expand)"
+		"[root] module.aws_alb_module.aws_alb.main (expand)" -> "[root] module.aws_alb_module.var.alb_name (expand)"
+		"[root] module.aws_alb_module.aws_alb.main (expand)" -> "[root] module.aws_alb_module.var.alb_sg (expand)"
+		"[root] module.aws_alb_module.aws_alb.main (expand)" -> "[root] module.aws_alb_module.var.subnet_ids_public (expand)"
+		"[root] module.aws_alb_module.aws_alb.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.aws_alb_module.aws_alb_listener.alb_listener (expand)" -> "[root] module.aws_alb_module.aws_alb.main (expand)"
+		"[root] module.aws_alb_module.aws_alb_listener.alb_listener (expand)" -> "[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)"
+		"[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)" -> "[root] module.aws_alb_module.aws_alb.main (expand)"
+		"[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)" -> "[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)"
+		"[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)" -> "[root] module.aws_alb_module.var.certificate_arn (expand)"
+		"[root] module.aws_alb_module.aws_alb_listener.ssl_listener (expand)" -> "[root] module.aws_alb_module.var.ssl_policy (expand)"
+		"[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)" -> "[root] module.aws_alb_module.var.health_check_path (expand)"
+		"[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)" -> "[root] module.aws_alb_module.var.tg_name (expand)"
+		"[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)" -> "[root] module.aws_alb_module.var.vpc_id (expand)"
+		"[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.aws_alb_module.output.alb_arn (expand)" -> "[root] module.aws_alb_module.aws_alb.main (expand)"
+		"[root] module.aws_alb_module.output.alb_hostname (expand)" -> "[root] module.aws_alb_module.aws_alb.main (expand)"
+		"[root] module.aws_alb_module.output.alb_listner (expand)" -> "[root] module.aws_alb_module.aws_alb_listener.alb_listener (expand)"
+		"[root] module.aws_alb_module.output.alb_target_group (expand)" -> "[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)"
+		"[root] module.aws_alb_module.output.alb_tg_arn (expand)" -> "[root] module.aws_alb_module.aws_alb_target_group.alb_tg (expand)"
+		"[root] module.aws_alb_module.var.alb_name (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.alb_name (expand)" -> "[root] var.alb_name"
+		"[root] module.aws_alb_module.var.alb_sg (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.alb_sg (expand)" -> "[root] var.alb_sg"
+		"[root] module.aws_alb_module.var.certificate_arn (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.certificate_arn (expand)" -> "[root] var.certificate_arn"
+		"[root] module.aws_alb_module.var.health_check_path (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.health_check_path (expand)" -> "[root] var.health_check_path"
+		"[root] module.aws_alb_module.var.ssl_policy (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.ssl_policy (expand)" -> "[root] var.ssl_policy"
+		"[root] module.aws_alb_module.var.subnet_ids_public (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.subnet_ids_public (expand)" -> "[root] var.subnet_ids_public"
+		"[root] module.aws_alb_module.var.tg_name (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.tg_name (expand)" -> "[root] var.tg_name"
+		"[root] module.aws_alb_module.var.vpc_id (expand)" -> "[root] module.aws_alb_module (expand)"
+		"[root] module.aws_alb_module.var.vpc_id (expand)" -> "[root] var.vpc_id"
+		"[root] module.rds_instance (close)" -> "[root] module.rds_instance.output.rds_endpoint (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.allocated_storage (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.db_subnet_group_name (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.engine (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.engine_version (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.final_snapshot_identifier (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.identifier (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.instance_class (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.port (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.publicly_accessible (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.skip_final_snapshot (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.snapshot_identifier (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.storage_type (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] module.rds_instance.var.vpc_security_group_ids (expand)"
+		"[root] module.rds_instance.aws_db_instance.database (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] module.rds_instance.output.rds_endpoint (expand)" -> "[root] module.rds_instance.aws_db_instance.database (expand)"
+		"[root] module.rds_instance.var.allocated_storage (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.allocated_storage (expand)" -> "[root] var.allocated_storage"
+		"[root] module.rds_instance.var.db_subnet_group_name (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.db_subnet_group_name (expand)" -> "[root] var.db_subnet_group_name"
+		"[root] module.rds_instance.var.engine (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.engine (expand)" -> "[root] var.engine"
+		"[root] module.rds_instance.var.engine_version (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.engine_version (expand)" -> "[root] var.engine_version"
+		"[root] module.rds_instance.var.final_snapshot_identifier (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.final_snapshot_identifier (expand)" -> "[root] var.final_snapshot_identifier"
+		"[root] module.rds_instance.var.identifier (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.identifier (expand)" -> "[root] var.identifier"
+		"[root] module.rds_instance.var.instance_class (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.instance_class (expand)" -> "[root] var.instance_class"
+		"[root] module.rds_instance.var.port (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.port (expand)" -> "[root] var.port"
+		"[root] module.rds_instance.var.publicly_accessible (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.publicly_accessible (expand)" -> "[root] var.publicly_accessible"
+		"[root] module.rds_instance.var.skip_final_snapshot (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.skip_final_snapshot (expand)" -> "[root] var.skip_final_snapshot"
+		"[root] module.rds_instance.var.snapshot_identifier (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.snapshot_identifier (expand)" -> "[root] var.snapshot_identifier"
+		"[root] module.rds_instance.var.storage_type (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.storage_type (expand)" -> "[root] var.storage_type"
+		"[root] module.rds_instance.var.vpc_security_group_ids (expand)" -> "[root] module.rds_instance (expand)"
+		"[root] module.rds_instance.var.vpc_security_group_ids (expand)" -> "[root] var.vpc_security_group_ids"
+		"[root] output.alb_tg_arn (expand)" -> "[root] module.aws_alb_module.output.alb_tg_arn (expand)"
+		"[root] output.rds_endpoint (expand)" -> "[root] module.rds_instance.output.rds_endpoint (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_in (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.autoscaling_group.aws_cloudwatch_metric_alarm.scale_out (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.autoscaling_group.aws_launch_configuration.new_lc (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.autoscaling_group.aws_sns_topic_subscription.DR_subscription (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] module.rds_instance.aws_db_instance.database (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.region"
+		"[root] root" -> "[root] module.autoscaling_group (close)"
+		"[root] root" -> "[root] module.rds_instance (close)"
+		"[root] root" -> "[root] output.alb_tg_arn (expand)"
+		"[root] root" -> "[root] output.rds_endpoint (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+		"[root] root" -> "[root] var.email"
+	}
+}
+
