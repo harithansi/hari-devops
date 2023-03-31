@@ -6,6 +6,7 @@ tfplan
 
 # logs
 *.log
+*.out
 
 # Directories
 .terraform/
