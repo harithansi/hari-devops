@@ -53,7 +53,7 @@ final_snapshot_identifier: The identifier for the final snapshot of the RDS inst
 ## General AWS Cli commands to display security groups, VPCID and Name, Assocaited subnets
 
 ### Display list of security groups
-aws ec2 describe-security-groups --query 'SecurityGroups[*].{Name: GroupName, ID: GroupId}' --output table|egrep  "elb-private-subnet-security3|lms-elb-sg|i2_rds_securitygroup"
+aws ec2 describe-security-groups --query 'SecurityGroups[*].{Name: GroupName, ID: GroupId}' --output table|egrep  "web|mysql|alb-security-group|backup-security-group"
 
 
 ############# Display the list of VPCID and Name, associated subnets.
