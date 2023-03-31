@@ -11,6 +11,6 @@ resource "aws_security_group" "mysql" {
   }
 
   tags = {
-    Name = "mysql"
+    Name = "DB_SG"
   }
 }
