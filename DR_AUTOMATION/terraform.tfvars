@@ -5,9 +5,9 @@ subnet_ids_private = ["subnet-093e195238393a545", "subnet-04d9da336dd5378c4"]
 tg_name            = "hari-tg" #Target group
 alb_name           = "hari-test-ALB"
 alb_sg             = "sg-054ded1b06697260b" ## ALB Sg name: 
-health_check_path  = "/smplhlthchk_2020ok.php"
+health_check_path  = "/health"
 ssl_policy         = "ELBSecurityPolicy-2016-08"
-certificate_arn    = "arn:aws:acm:us-west-1:249437634744:certificate/169df275-2f2c-4983-bd7f-306d61b66dce"
+certificate_arn    = "arn:aws:acm:us-west-1:959705468080:certificate/4c92ab3d-773f-4795-94e9-a66ab4dfbdfe"
 
 
 # ASG Configuration
@@ -27,7 +27,7 @@ ami_id                    = "ami-060d3509162bcc386"
 instance_profile_arn      = "arn:aws:iam::249437634744:instance-profile/Simpli-Staging-EC2"
 health_check_grace_period = 300
 default_cooldown          = 200
-email                     = "devops@simplilearn.net"
+email                     = "haritdevops@gmail.com"
 
 ############ DATABASE CONFIGURATIONS 
 allocated_storage         = 40
