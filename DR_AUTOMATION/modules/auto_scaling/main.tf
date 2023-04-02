@@ -98,7 +98,6 @@ resource "aws_sns_topic" "DR_topic" {
 resource "aws_sns_topic_subscription" "DR_subscription" {
   topic_arn = resource.aws_sns_topic.DR_topic.arn
   protocol = "email"
-  #endpoint = "devops@simplilearn.net"
   endpoint = var.email
 }
 

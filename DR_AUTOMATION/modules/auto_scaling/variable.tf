@@ -74,7 +74,7 @@ variable "default_cooldown" {
 
 variable "email" {
     type = string
-    default = "devops@simplilearn.net"
+    default = "haritdevops@gmail.com"
   
 }
 

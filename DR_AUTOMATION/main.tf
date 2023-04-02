@@ -33,7 +33,7 @@ module "autoscaling_group" {
 }
 
 
-module "rds_instance" {
+/*module "rds_instance" {
   source                    = "./modules/rds_instance"
   allocated_storage         = var.allocated_storage
   snapshot_identifier       = var.snapshot_identifier
@@ -48,4 +48,4 @@ module "rds_instance" {
   skip_final_snapshot       = var.skip_final_snapshot
   port                      = var.port
   final_snapshot_identifier = var.final_snapshot_identifier
-}
+}*/
