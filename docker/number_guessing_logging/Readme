@@ -1,0 +1,2 @@
+docker build -t number-guessing-game .
+docker run -it --rm -v $(pwd)/logs:/app/logs number-guessing-game
