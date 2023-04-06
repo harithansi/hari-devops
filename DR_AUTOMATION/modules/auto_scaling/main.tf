@@ -6,7 +6,7 @@ resource "aws_launch_configuration" "new_lc" {
   key_name           = var.key_name
 }
 
-
+  
 
 resource "aws_launch_template" "Launch_template" {
   name     = "asg-template"
