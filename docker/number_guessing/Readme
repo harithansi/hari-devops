@@ -1,0 +1,3 @@
+
+docker build -t number-guessing-game .
+docker run -it number-guessing-game
