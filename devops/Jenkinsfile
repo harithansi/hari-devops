@@ -1,0 +1,32 @@
+pipeline {
+  agent any
+
+  
+  stages {
+    stage('Download repository') {
+      steps {
+        git branch: 'main', url: 'https://github.com/harithansi/hari-devops.git'
+      }
+    }
+    
+    stage('Build and test') {
+      steps {
+        dir('docker/number_guessing') {
+          script {
+            sh 'docker build -t python .'
+          }
+        }
+      }
+    } 
+
+    stage('Deploying into kubernets cluster') {
+      steps {
+        dir('kubernetes/deployment') {
+            script {
+                sh 'kubectl apply -f deployments.yaml'
+            }
+        }
+      }
+    }
+  }
+} 
